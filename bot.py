@@ -7,6 +7,7 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
+from keep_alive import keep_alive
 from geocode import resolve_location
 from tarot import get_tarot_reading, format_tarot_reading
 from api import fetch_chart, fetch_now, fetch_varga, fetch_dasha, fetch_panchanga
@@ -905,5 +906,6 @@ if __name__ == "__main__":
     if not DISCORD_TOKEN:
         print("Error: DISCORD_TOKEN environment variable is not set.")
         sys.exit(1)
+    keep_alive()
     print("Starting AstroBot...")
     bot.run(DISCORD_TOKEN)
