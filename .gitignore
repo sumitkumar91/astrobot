@@ -1,0 +1,5 @@
+.env
+saved_charts.json
+node_modules/
+__pycache__/
+*.pyc
